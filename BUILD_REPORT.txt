@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>延伸资源｜GoxEDGE 出版配套资源</title>
-  <meta name="description" content="GoxEDGE 出版配套资源站的延伸资源，包含术语、工具更新、GILTOS Demo 和后续资料。" />
+  <title>隐私说明｜GoxEDGE</title>
+  <meta name="description" content="GoxEDGE 出版配套资源站的隐私说明与数据处理边界。" />
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
@@ -22,8 +22,7 @@
   </div>
 </header>
 <main>
-<section class="page-hero"><div class="container"><div class="breadcrumb"><a href="../index.html">首页</a> / 资源</div><span class="eyebrow">Resources</span><h1>延伸资源</h1><p>这里聚合术语解释、工具更新、GILTOS Demo、案例场景和后续读者资料，是书籍阅读之外的延展入口。</p></div></section>
-<section><div class="container grid grid-3"><div class="card"><h3>术语与概念</h3><p>出海、全球拓展、全球化经营、准备度、风险门禁等概念说明将持续补充。</p></div><div class="card"><h3>GILTOS Demo</h3><p>了解 GoxEDGE 方法如何被探索性地转化为 AI 运营系统和数字化工作流。</p><a class="btn btn-ghost" href="https://www.giltos.com/demo/" target="_blank" rel="noopener">查看 Demo</a></div><div class="card"><h3>更新公告</h3><p>查看工具、章节资料、下载资源和出版信息的更新记录。</p><a class="btn btn-ghost" href="../updates/index.html">查看更新</a></div></div></section>
+<section class="page-hero"><div class="container"><div class="breadcrumb"><a href="../index.html">首页</a> / 隐私说明</div><span class="eyebrow">Privacy</span><h1>隐私说明</h1><p>当前站点为静态出版配套资源站预览版，不会真实创建账号、保存下载申请或处理敏感数据。</p></div></section><section><div class="container"><div class="card"><h2>数据处理边界</h2><p>当前版本中的联系表单、工具订阅、下载按钮均为静态演示交互，不会真实提交数据。正式上线下载和订阅功能前，将补充更完整的隐私政策。</p></div></div></section>
 </main>
 <footer class="site-footer">
   <div class="container footer-grid">
