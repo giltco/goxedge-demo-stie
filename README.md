@@ -1,40 +1,42 @@
-# GoxEDGE Book Companion Site
+# 《出海战略》读者配套资源站
 
-《GoxEDGE 全球拓展卓越实践》出版配套资源站。
+goxedge.com 是 **《出海战略：从走出去到走下去》**（作者：何敏，机械工业出版社）的读者配套资源站。
 
 ## 站点定位
 
-GoxEDGE.com 是《GoxEDGE 全球拓展卓越实践》的出版配套资源站，面向读者、企业管理者、出海从业者和合作机构，提供模型说明、章节导读、配套工具、案例场景、术语解释和方法更新。
+本站围绕书中的 **GoxEDGE 全球拓展战略模型**，为读者提供图书介绍、模型说明、章节导读、配套资源说明与 Minvista 读者更新渠道。GoxEDGE 是模型名称，不是书名。
+
+当前阶段：**release-ready**（出版信息、购买链接、下载文件等待正式确认后更新）。
 
 ## 页面结构
 
 - `/index.html` 首页
 - `/book/` 图书介绍
-- `/model/` GoxEDGE 模型
-- `/tools/` 配套工具
-- `/tools/readiness-check/` 出海准备度自测表
-- `/tools/market-selection/` 目标市场选择矩阵
-- `/tools/action-plan/` 90 天行动计划模板
+- `/model/` GoxEDGE 全球拓展战略模型
+- `/resources/` 配套资源
 - `/chapters/` 章节导读
-- `/cases/` 案例与场景
-- `/resources/` 延伸资源
-- `/updates/` 更新公告
-- `/about/` 作者与项目
-- `/contact/` 联系与合作
-- `/privacy/` 隐私政策
+- `/updates/` Minvista 读者更新
+- `/contact/` 读者联系
+- `/about/` 关于本书
+- `/tools/readiness-check/` 企业全球拓展自测表（说明页）
+- `/tools/market-selection/` 目标市场判断模板（说明页）
+- `/tools/action-plan/` 行动计划模板（说明页）
+- `/privacy/` 隐私说明
 - `/terms/` 使用条款
 - `/sitemap/` 站点地图
+
+## 配置
+
+- `assets/js/book-config.js` — 书名、作者、出版社、购买链接、Minvista
+- `assets/js/site-config.js` — `launchPhase` 与页面可见性开关
 
 ## GitHub Pages 发布
 
 1. 将本包内容上传到 GitHub 仓库根目录。
 2. 在仓库设置中启用 GitHub Pages，Source 选择 `Deploy from a branch`，目录选择根目录。
-3. 如使用自定义域名，保留根目录下的 `CNAME` 文件；当前配置为 `goxedge.com`。
-4. 如果暂时不用自定义域名，可以删除 `CNAME` 文件。
+3. 自定义域名使用根目录 `CNAME`（当前为 `goxedge.com`）。
 
 ## 技术说明
 
-- 纯静态 HTML / CSS / JS。
-- 无外部依赖。
-- 已包含 `.nojekyll`，适配 GitHub Pages。
-- 已包含 `robots.txt` 和 `sitemap.xml`。
+- 纯静态 HTML / CSS / JS，无构建步骤。
+- 含 `.nojekyll`、`robots.txt`、`sitemap.xml`。

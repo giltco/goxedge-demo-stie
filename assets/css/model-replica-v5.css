@@ -1,0 +1,643 @@
+/**
+ * GoxEDGE model replica v5 — fidelity polish over v4.
+ */
+
+/* Canvas: diagram feel, not card UI */
+.v4-model-scroll {
+  border: 1px solid rgba(23, 32, 42, 0.14);
+  border-radius: 4px;
+  box-shadow: none;
+  background: #fff;
+}
+
+.v4-model-toolbar {
+  margin-bottom: 12px;
+}
+
+.v4-model-ctrl {
+  padding: 7px 14px;
+  font-size: 0.8125rem;
+}
+
+/* Row grid: wider labels */
+.v4-model-row {
+  grid-template-columns: 150px 1fr;
+}
+
+.v4-model-row-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  padding: 14px 10px;
+}
+
+.v4-model-row-label--mechanism {
+  background: linear-gradient(165deg, #f55a2e 0%, #e03d18 50%, #c42f10 100%);
+}
+
+.v4-model-row-label--path {
+  background: linear-gradient(165deg, #083d66 0%, #062f4f 50%, #041f35 100%);
+}
+
+.v4-model-row-label--capability {
+  background: linear-gradient(165deg, #128896 0%, #0f6674 50%, #062f4f 100%);
+}
+
+.v4-model-row-label--judgment {
+  background: linear-gradient(165deg, #3a9a3e 0%, #2f7d32 50%, #1f6b2c 100%);
+}
+
+.v4-model-row-label--note {
+  font-size: 1.125rem;
+  border-width: 2px;
+}
+
+/* Row heights — V6 uses min-height; rows expand with content */
+.v4-model-row--mechanism { min-height: 128px; height: auto; }
+.v4-model-row--path { min-height: 310px; height: auto; }
+.v4-model-row--capability { min-height: 120px; height: auto; }
+.v4-model-row--judgment { min-height: 96px; height: auto; }
+.v4-model-row--note { min-height: 56px; height: auto; }
+
+/* Mechanism row */
+.v4-model-mechanism-band {
+  border: 2px solid rgba(240, 74, 35, 0.55);
+  border-radius: 6px;
+  margin: 6px 10px;
+  background: linear-gradient(180deg, rgba(240, 74, 35, 0.06) 0%, rgba(240, 74, 35, 0.02) 100%);
+}
+
+.v4-model-mechanism-loop {
+  top: 4px;
+  height: 36px;
+}
+
+.v4-model-mechanism-nodes {
+  gap: 16px;
+  padding: 22px 0 4px;
+}
+
+.v4-model-mechanism-circle {
+  width: 56px;
+  height: 56px;
+  box-shadow: 0 3px 10px rgba(240, 74, 35, 0.3);
+}
+
+.v4-model-mechanism-circle::after {
+  width: 12px;
+  height: 12px;
+}
+
+.v4-model-mechanism-title {
+  font-size: 0.9375rem;
+}
+
+.v4-model-mechanism-sub {
+  font-size: 0.6875rem;
+}
+
+.v4-model-mechanism-arrow {
+  font-size: 1.5rem;
+  padding-top: 16px;
+  color: #e03d18;
+}
+
+.v4-model-mechanism-footnote {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--v4-ink);
+  padding: 0 12px;
+}
+
+/* Path row */
+.v4-model-path-inner {
+  padding: 6px 8px 4px;
+}
+
+.v4-model-path-track {
+  gap: 0;
+}
+
+.v4-model-stage-arrow {
+  font-size: 0.75rem;
+  color: var(--v4-navy);
+  padding: 0 3px;
+  font-weight: 700;
+}
+
+.v4-model-stage-card {
+  border-radius: 3px;
+  padding: 8px 8px 6px;
+  border-top-width: 3px;
+}
+
+.v4-model-stage-icon {
+  width: 32px;
+  height: 32px;
+  font-size: 0.75rem;
+  margin-bottom: 5px;
+}
+
+.v4-model-stage-title {
+  font-size: 0.8125rem;
+}
+
+.v4-model-stage-en {
+  font-size: 0.625rem;
+  margin-bottom: 5px;
+}
+
+.v4-model-stage-list {
+  font-size: 0.625rem;
+  line-height: 1.45;
+}
+
+.v4-model-iteration {
+  flex: 0 0 34px;
+  margin-top: 2px;
+}
+
+.v4-model-iteration-svg {
+  height: 12px;
+}
+
+.v4-model-iteration-label {
+  font-size: 0.6875rem;
+  letter-spacing: 0.02em;
+}
+
+/* Capability band — one connected layer */
+.v4-model-capability-band {
+  margin: 6px 10px;
+  border: 2px solid rgba(6, 47, 79, 0.35);
+  border-radius: 4px;
+  background: #fff;
+}
+
+.v4-model-capability-head {
+  padding: 8px 16px;
+  background: linear-gradient(180deg, #062f4f 0%, #041f35 100%);
+  border-bottom: 0;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.v4-model-capability-head strong {
+  color: #fff;
+}
+
+.v4-model-capability-head span {
+  color: rgba(248, 245, 239, 0.75);
+}
+
+.v4-model-capability-cells {
+  background: linear-gradient(180deg, rgba(6, 47, 79, 0.04) 0%, rgba(15, 102, 116, 0.03) 100%);
+}
+
+.v4-model-capability-cell {
+  padding: 10px 12px;
+  border-right: 1px solid rgba(6, 47, 79, 0.18);
+}
+
+.v4-model-capability-cell strong {
+  font-size: 0.6875rem;
+  color: var(--v4-navy);
+  margin-bottom: 4px;
+}
+
+.v4-model-capability-cell p {
+  font-size: 0.5625rem;
+  line-height: 1.4;
+}
+
+.v4-model-capability-cell.is-selected {
+  background: rgba(6, 47, 79, 0.1);
+}
+
+/* Judgment foundation */
+.v4-model-judgment-band {
+  margin: 6px 10px;
+  border: 2px solid rgba(47, 125, 50, 0.45);
+  border-radius: 4px;
+  background: linear-gradient(180deg, rgba(47, 125, 50, 0.1) 0%, rgba(47, 125, 50, 0.04) 100%);
+  padding: 8px 14px;
+}
+
+.v4-model-judgment-head {
+  font-size: 0.6875rem;
+  margin-bottom: 6px;
+}
+
+.v4-model-judgment-head strong {
+  font-size: 0.75rem;
+}
+
+.v4-model-judgment-head span {
+  font-size: 0.625rem;
+}
+
+.v4-model-judgment-cells {
+  gap: 6px;
+}
+
+.v4-model-judgment-cell {
+  font-size: 0.5625rem;
+  padding: 6px 8px;
+  border-color: rgba(47, 125, 50, 0.3);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.v4-model-judgment-cell.is-selected {
+  background: rgba(47, 125, 50, 0.15);
+}
+
+/* Note row */
+.v4-model-note-row .v4-model-row-content {
+  border-width: 2px;
+  margin: 0 10px 6px;
+  border-radius: 4px;
+}
+
+.v4-model-note-text {
+  font-size: 0.6875rem;
+  padding: 10px 20px;
+  color: var(--v4-ink);
+}
+
+.v4-model-row-content {
+  border-left-color: rgba(23, 32, 42, 0.1);
+}
+
+/* Detail panel */
+.v4-detail-panel {
+  margin-top: 20px;
+}
+
+/* ── V6 precision polish ── */
+
+.v4-model-replica {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.v4-model-scroll {
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+.v4-model-canvas {
+  min-width: 1180px;
+  width: 100%;
+  max-width: 1320px;
+}
+
+.v4-model-row {
+  align-items: stretch;
+}
+
+.v4-model-row-label {
+  align-self: stretch;
+}
+
+.v4-model-row--mechanism { min-height: 128px; height: auto; }
+.v4-model-row--path { min-height: 310px; height: auto; }
+.v4-model-row--capability { min-height: 120px; height: auto; }
+.v4-model-row--judgment { min-height: 96px; height: auto; }
+.v4-model-row--note { min-height: 56px; height: auto; }
+
+.v4-model-row-content {
+  overflow: visible;
+}
+
+.v4-model-path-inner {
+  min-height: 310px;
+  height: 100%;
+}
+
+.v4-model-path-track {
+  align-items: stretch;
+  min-height: 0;
+}
+
+.v4-model-stage-card {
+  border: 1px solid var(--stage-color, var(--v4-blue));
+  border-top-width: 3px;
+  box-shadow: none;
+  padding: 7px 7px 5px;
+  min-height: 0;
+  overflow: visible;
+}
+
+.v4-model-stage-list {
+  overflow-y: visible;
+  overflow-x: visible;
+  flex: 1 1 auto;
+  font-size: 0.6875rem;
+  line-height: 1.42;
+}
+
+.v4-model-stage-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.v4-model-stage-en {
+  font-size: 0.6875rem;
+}
+
+.v4-model-stage-icon {
+  width: 34px;
+  height: 34px;
+  font-size: 0.8125rem;
+}
+
+.v4-model-capability-cell strong {
+  display: block;
+  font-size: 0.75rem;
+}
+
+.v4-model-capability-cell em {
+  display: block;
+  font-style: normal;
+  font-size: 0.5625rem;
+  color: var(--v4-soft);
+  margin-bottom: 3px;
+}
+
+.v4-model-capability-cell p {
+  font-size: 0.625rem;
+}
+
+.v4-model-judgment-cell {
+  font-size: 0.625rem;
+}
+
+.v4-model-mechanism-band {
+  min-height: 116px;
+  height: 100%;
+}
+
+@media (min-width: 1180px) {
+  .v4-model-scroll-hint {
+    display: none;
+  }
+}
+
+@media (max-width: 1179px) {
+  .v4-model-scroll-hint {
+    display: block;
+  }
+}
+
+/* ── V6.1 model icons & iteration ── */
+
+.v4-model-mech-glyph::after {
+  display: none;
+}
+
+.v4-model-row-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.v4-model-label-glyph {
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin: 0 auto 2px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.92;
+}
+
+.v4-model-label-glyph--mechanism {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M4 12a8 8 0 0 1 16 0'/%3E%3Cpath d='M12 4v4M12 16v4' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.v4-model-label-glyph--path {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Ccircle cx='12' cy='10' r='3'/%3E%3Cpath d='M12 13v8M8 21h8' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.v4-model-label-glyph--capability {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M12 3L4 7v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V7l-8-4z'/%3E%3C/svg%3E");
+}
+
+.v4-model-label-glyph--judgment {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M4 20h16M6 20V10l6-6 6 6v10'/%3E%3C/svg%3E");
+}
+
+.v4-model-label-glyph--note {
+  font-size: 1rem;
+  line-height: 1;
+  width: auto;
+  height: auto;
+}
+
+.v4-model-mech-glyph {
+  position: relative;
+}
+
+.v4-model-mech-glyph::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.v4-model-mech-glyph--cognition::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 5C6 5 2 12 2 12s4 7 10 7 10-7 10-7-4-7-10-7zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8z'/%3E%3C/svg%3E");
+}
+
+.v4-model-mech-glyph--action::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M5 12h12M13 7l5 5-5 5'/%3E%3C/svg%3E");
+}
+
+.v4-model-mech-glyph--feedback::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M9 11l3 3L22 4' stroke-linecap='round'/%3E%3Cpath d='M21 12v7a2 2 0 0 1-2 2H5l-3 3V5a2 2 0 0 1 2-2h11'/%3E%3C/svg%3E");
+}
+
+.v4-model-stage-glyph {
+  position: relative;
+  font-size: 0.6875rem;
+}
+
+.v4-model-stage-glyph::after {
+  content: "";
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  width: 12px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.85;
+}
+
+.v4-model-stage-glyph--explore::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E");
+}
+
+.v4-model-stage-glyph--position::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Ccircle cx='12' cy='12' r='8' fill='none' stroke='white' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E");
+}
+
+.v4-model-stage-glyph--execute::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5zm8.94-2.06l1.41-1.41-1.06-1.06 1.41-1.41-1.41-1.41-1.06 1.06-1.41-1.41-1.41 1.41 1.06 1.06-1.41 1.41 1.41 1.41 1.06-1.06 1.41 1.41 1.41-1.41-1.06-1.06z'/%3E%3C/svg%3E");
+}
+
+.v4-model-stage-glyph--empower::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Ccircle cx='9' cy='8' r='2.5'/%3E%3Ccircle cx='15' cy='8' r='2.5'/%3E%3Cpath d='M4 20c0-3 2.5-5 5-5s5 2 5 5'/%3E%3C/svg%3E");
+}
+
+.v4-model-stage-glyph--optimize::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M3 17v4h4l9-9-4-4L3 17zm14-7l1.41-1.41 2.83 2.83L20 10.83 18.59 9.41 17 11l-1.41-1.41z'/%3E%3C/svg%3E");
+}
+
+.v4-model-stage-glyph--sustain::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 2C8 6 6 9 6 12a6 6 0 0 0 12 0c0-3-2-6-6-10z'/%3E%3C/svg%3E");
+}
+
+.v4-model-stage-arrow {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  padding: 0 4px;
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+.v4-model-stage-arrow-glyph {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 9px solid var(--v4-blue);
+}
+
+.v4-model-iteration {
+  flex: 0 0 48px;
+  padding-top: 2px;
+}
+
+.v4-model-iteration-svg {
+  height: 44px;
+  display: block;
+}
+
+.v4-model-iteration-label {
+  margin-top: -4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--v4-blue);
+}
+
+.v4-model-path-track {
+  overflow: visible;
+}
+
+.v4-model-scroll {
+  overflow-y: visible !important;
+}
+
+.v4-model-stage-list {
+  overflow-y: visible !important;
+  max-height: none !important;
+}
+
+/* ── V6.2 model fidelity ── */
+
+.v4-model-canvas {
+  gap: 10px;
+  padding: 10px;
+  background: #fff;
+}
+
+.v4-model-row {
+  border: 1px solid rgba(23, 32, 42, 0.12);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.v4-model-row-content {
+  background: #fff;
+}
+
+.v4-model-mechanism-band {
+  margin: 8px 12px;
+  border-radius: 6px;
+}
+
+.v4-model-capability-band {
+  margin: 8px 12px;
+}
+
+.v4-model-judgment-band {
+  margin: 8px 12px;
+}
+
+.v4-model-note-row .v4-model-row-content {
+  margin: 8px 12px 8px;
+}
+
+.v4-model-mechanism-loop {
+  display: none;
+}
+
+.v4-model-label-glyph {
+  width: 28px;
+  height: 28px;
+  opacity: 1;
+}
+
+.v4-model-mech-glyph::before {
+  inset: 11px;
+}
+
+.v4-model-stage-glyph::after {
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  right: 1px;
+  bottom: 1px;
+}
+
+.v4-model-stage-arrow-glyph {
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 11px solid var(--v4-blue);
+}
+
+.v4-model-iteration {
+  flex: 0 0 52px;
+  min-height: 52px;
+  overflow: visible;
+}
+
+.v4-model-iteration-svg {
+  height: 48px;
+  overflow: visible;
+}
+
+.v4-model-iteration-label {
+  margin-top: 0;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.v4-model-path-inner {
+  overflow: visible;
+}
+
+.v4-model-stage-card {
+  box-shadow: none;
+  border-width: 1px;
+  border-top-width: 3px;
+}

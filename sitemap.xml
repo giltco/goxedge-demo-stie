@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://goxedge.com/about/</loc><priority>0.8</priority></url>
-  <url><loc>https://goxedge.com/book/</loc><priority>0.8</priority></url>
-  <url><loc>https://goxedge.com/cases/</loc><priority>0.8</priority></url>
-  <url><loc>https://goxedge.com/chapters/</loc><priority>0.8</priority></url>
-  <url><loc>https://goxedge.com/contact/</loc><priority>0.8</priority></url>
   <url><loc>https://goxedge.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://goxedge.com/model/</loc><priority>0.8</priority></url>
-  <url><loc>https://goxedge.com/privacy/</loc><priority>0.8</priority></url>
-  <url><loc>https://goxedge.com/resources/</loc><priority>0.8</priority></url>
-  <url><loc>https://goxedge.com/sitemap/</loc><priority>0.8</priority></url>
-  <url><loc>https://goxedge.com/terms/</loc><priority>0.8</priority></url>
-  <url><loc>https://goxedge.com/tools/action-plan/</loc><priority>0.8</priority></url>
-  <url><loc>https://goxedge.com/tools/</loc><priority>0.8</priority></url>
-  <url><loc>https://goxedge.com/tools/market-selection/</loc><priority>0.8</priority></url>
-  <url><loc>https://goxedge.com/tools/readiness-check/</loc><priority>0.8</priority></url>
+  <url><loc>https://goxedge.com/book/</loc><priority>0.9</priority></url>
+  <url><loc>https://goxedge.com/model/</loc><priority>0.9</priority></url>
+  <url><loc>https://goxedge.com/resources/</loc><priority>0.9</priority></url>
+  <url><loc>https://goxedge.com/purchase/</loc><priority>0.9</priority></url>
+  <url><loc>https://goxedge.com/chapters/</loc><priority>0.9</priority></url>
   <url><loc>https://goxedge.com/updates/</loc><priority>0.8</priority></url>
+  <url><loc>https://goxedge.com/contact/</loc><priority>0.7</priority></url>
+  <url><loc>https://goxedge.com/privacy/</loc><priority>0.3</priority></url>
+  <url><loc>https://goxedge.com/terms/</loc><priority>0.3</priority></url>
+  <url><loc>https://goxedge.com/sitemap/</loc><priority>0.3</priority></url>
 </urlset>

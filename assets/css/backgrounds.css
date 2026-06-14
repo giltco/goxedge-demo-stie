@@ -1,0 +1,76 @@
+/* Restrained background system — model-inspired, low contrast */
+
+.bg-hero-book {
+  position: relative;
+  background: linear-gradient(180deg, var(--paper) 0%, var(--bg) 100%);
+}
+
+.bg-hero-book::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../img/backgrounds/bg-hero-book.svg') center top / cover no-repeat;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.bg-hero-book > .container,
+.bg-hero-book > .container-wide {
+  position: relative;
+  z-index: 1;
+}
+
+.bg-model-grid {
+  position: relative;
+}
+
+.bg-model-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../img/backgrounds/bg-model-grid.svg') center / cover no-repeat;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.bg-model-grid > .container,
+.bg-model-grid > .container-wide {
+  position: relative;
+  z-index: 1;
+}
+
+.bg-resource-index {
+  position: relative;
+}
+
+.bg-resource-index::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../img/backgrounds/bg-resource-index.svg') right top / 60% auto no-repeat;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.bg-resource-index > .container,
+.bg-resource-index > .container-wide,
+.bg-resource-index > .minvista-editorial {
+  position: relative;
+  z-index: 1;
+}
+
+/* Legacy — disabled */
+.bg-hero-subtle,
+.bg-model-subtle {
+  background: linear-gradient(180deg, var(--paper) 0%, var(--bg) 100%);
+}
+
+.bg-hero-strategy::before,
+.bg-model-structure::before,
+.bg-resources-index::before,
+.bg-chapters-path::before,
+.bg-minvista-lab::before,
+.bg-contact-network::before,
+.bg-footer-structure::before {
+  display: none;
+}

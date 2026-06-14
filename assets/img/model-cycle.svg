@@ -1,1 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520"><rect width="900" height="520" rx="32" fill="#f8fbff"/><g font-family="Arial, sans-serif" font-weight="800" text-anchor="middle"><circle cx="450" cy="260" r="112" fill="#0f172a"/><text x="450" y="250" fill="#fff" font-size="36">GoxEDGE</text><text x="450" y="290" fill="#bfdbfe" font-size="18">Global Expansion Practice</text></g><g font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle"><circle cx="450" cy="70" r="52" fill="#1677ff"/><text x="450" y="78" fill="#fff">探索</text><circle cx="650" cy="150" r="52" fill="#1677ff"/><text x="650" y="158" fill="#fff">定位</text><circle cx="700" cy="350" r="52" fill="#1677ff"/><text x="700" y="358" fill="#fff">执行</text><circle cx="450" cy="450" r="52" fill="#1677ff"/><text x="450" y="458" fill="#fff">赋能</text><circle cx="200" cy="350" r="52" fill="#1677ff"/><text x="200" y="358" fill="#fff">优化</text><circle cx="250" cy="150" r="52" fill="#1677ff"/><text x="250" y="158" fill="#fff">可持续</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="GoxEDGE 六阶段模型示意图">
+  <rect width="640" height="360" fill="#f3f2ef" rx="12"/>
+  <g fill="none" stroke="#2c4a6e" stroke-width="2">
+    <circle cx="120" cy="180" r="44"/>
+    <circle cx="240" cy="100" r="44"/>
+    <circle cx="400" cy="100" r="44"/>
+    <circle cx="520" cy="180" r="44"/>
+    <circle cx="400" cy="260" r="44"/>
+    <circle cx="240" cy="260" r="44"/>
+    <path d="M164 180 H196 M284 120 L356 120 M444 120 H476 M476 180 V220 M444 260 H356 M284 260 H196 M120 180 V220"/>
+  </g>
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#1a1a1a" text-anchor="middle">
+    <text x="120" y="185">探索</text>
+    <text x="240" y="105">定位</text>
+    <text x="400" y="105">执行</text>
+    <text x="520" y="185">赋能</text>
+    <text x="400" y="265">优化</text>
+    <text x="240" y="265">可持续</text>
+  </g>
+  <text x="320" y="28" font-family="Georgia, serif" font-size="14" fill="#5a5a5a" text-anchor="middle">GoxEDGE 方法框架 · 示意图</text>
+</svg>

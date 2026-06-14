@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <g fill="none" stroke="#1a3d52" opacity="0.06">
+    <rect x="80" y="100" width="200" height="260" rx="3" stroke-width="1"/>
+    <rect x="100" y="88" width="160" height="24" rx="2" stroke-width="1" fill="#f7f5f0" opacity="0.5"/>
+    <rect x="320" y="100" width="200" height="260" rx="3" stroke-width="1"/>
+    <rect x="340" y="88" width="160" height="24" rx="2" stroke-width="1"/>
+    <line x1="120" y1="160" x2="240" y2="160" stroke-width="0.8"/>
+    <line x1="120" y1="190" x2="220" y2="190" stroke-width="0.8"/>
+    <line x1="120" y1="220" x2="230" y2="220" stroke-width="0.8"/>
+    <line x1="120" y1="250" x2="200" y2="250" stroke-width="0.8"/>
+    <text x="130" y="145" font-family="sans-serif" font-size="10" fill="#1a3d52" opacity="0.15">Fig.</text>
+  </g>
+  <g stroke="#9a7b4f" opacity="0.05" fill="none">
+    <line x1="60" y1="0" x2="60" y2="800" stroke-width="0.6"/>
+    <line x1="80" y1="0" x2="80" y2="800" stroke-width="0.4"/>
+  </g>
+</svg>
