@@ -29,8 +29,7 @@ var RESOURCES_CONFIG = {
     'appendix-a',
     'appendix-b',
     'appendix-c',
-    'self-assessment',
-    'market-templates'
+    'appendix-d'
   ],
 
   items: [
@@ -235,7 +234,7 @@ var RESOURCES_CONFIG = {
 
       category: '入门资料',
 
-      description: '用于快速理解 GoxEDGE 全球拓展战略模型的简版说明资料，适合首次接触本书方法框架的读者。',
+      description: '用于帮助初次接触 GoxEDGE 的读者快速理解模型结构、六阶段路径和基本使用方式。',
 
       availabilityStatus: 'upcoming',
 
@@ -259,7 +258,7 @@ var RESOURCES_CONFIG = {
 
       category: '工作手册',
 
-      description: '用于记录企业全球拓展中的战略判断、市场假设、路径选择和复盘问题。',
+      description: '用于围绕战略锚点、起点校准、路径设计和阶段复盘开展结构化记录。',
 
       availabilityStatus: 'upcoming',
 
@@ -283,7 +282,7 @@ var RESOURCES_CONFIG = {
 
       category: '工作坊画布',
 
-      description: '用于企业内部读书会、管理层研讨和全球拓展路径共识讨论。',
+      description: '用于企业读书会、管理层研讨和工作坊场景下的团队共创。',
 
       availabilityStatus: 'workshop',
 
@@ -307,7 +306,7 @@ var RESOURCES_CONFIG = {
 
       category: '检查清单',
 
-      description: '用于梳理目标市场进入前需要确认的关键判断、资源边界和风险事项。',
+      description: '用于进入目标市场前，对环境、需求、竞争、规则、资源和风险进行初步核对。',
 
       availabilityStatus: 'upcoming',
 

@@ -106,7 +106,7 @@ var SITE_CONFIG = {
 
   minvistaCTALabel: '关注 Minvista',
 
-  contactCTALabel: '联系交流'
+  contactCTALabel: '联系作者'
 
 };
 

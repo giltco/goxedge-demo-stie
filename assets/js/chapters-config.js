@@ -110,6 +110,70 @@ var CHAPTERS_CONFIG = {
 
   ],
 
+  rolePaths: [
+
+    {
+
+      id: 'executives',
+
+      title: '企业管理者',
+
+      chapters: '推荐：第 1–5 章，第 11 章与结语',
+
+      description: '适合用于统一战略目标、判断启动条件、识别资源边界和组织承接要求。'
+
+    },
+
+    {
+
+      id: 'intl-leaders',
+
+      title: '国际业务负责人',
+
+      chapters: '推荐：第 5–10 章',
+
+      description: '适合用于梳理目标市场、进入节奏、首轮执行和跨市场协同。'
+
+    },
+
+    {
+
+      id: 'strategy-marketing',
+
+      title: '战略与市场团队',
+
+      chapters: '推荐：第 1–7 章',
+
+      description: '适合用于建立市场判断、机会评估、竞争分析和路径优先级讨论框架。'
+
+    },
+
+    {
+
+      id: 'localization',
+
+      title: '产品本地化团队',
+
+      chapters: '推荐：第 6–10 章',
+
+      description: '适合用于理解客户语境、产品适配、本地反馈和运营承接之间的关系。'
+
+    },
+
+    {
+
+      id: 'advisors-research',
+
+      title: '出海服务机构 / 顾问 / 研究者',
+
+      chapters: '推荐：全书通读',
+
+      description: '适合将 GoxEDGE 作为诊断、研讨、研究和复盘参考框架。'
+
+    }
+
+  ],
+
   tableOfContents: [
 
     {
@@ -176,13 +240,13 @@ var CHAPTERS_CONFIG = {
 
       chapters: [
 
-        '附录 A GoxEDGE 方法应用说明',
+        '附录 A：GoxEDGE 方法应用说明',
 
-        '附录 B GoxEDGE 主要图表索引',
+        '附录 B：GoxEDGE 主要图表索引',
 
-        '附录 C GoxEDGE 核心判断原则索引',
+        '附录 C：GoxEDGE 核心判断原则索引',
 
-        '附录 D 参考资料与延伸阅读'
+        '附录 D：参考资料与延伸阅读'
 
       ]
 

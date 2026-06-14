@@ -178,7 +178,7 @@ var OFFERS_CONFIG = {
 
       title: '读者专享资料',
 
-      description: '面向购书读者或指定读者逐步开放的配套资料。',
+      description: '面向购书读者或指定读者开放的资料，将根据出版进度逐步更新获取方式。',
 
       items: [
 
@@ -262,7 +262,7 @@ var OFFERS_CONFIG = {
 
           category: '检查清单',
 
-          description: '用于梳理目标市场进入前需要确认的关键判断、资源边界和风险事项。',
+          description: '用于进入目标市场前，对环境、需求、竞争、规则、资源和风险进行初步核对。',
 
           availabilityStatus: 'upcoming',
 
@@ -286,9 +286,9 @@ var OFFERS_CONFIG = {
 
       id: 'lead-magnet',
 
-      title: '入门资料与更新领取',
+      title: '入门资料与更新',
 
-      description: '通过 Minvista 获取更新通知或领取指引的轻量资料。',
+      description: '帮助读者快速理解 GoxEDGE 模型与基本使用方式的轻量资料，将通过 Minvista 获取更新或领取指引。',
 
       items: [
 
@@ -300,7 +300,7 @@ var OFFERS_CONFIG = {
 
           category: '入门资料',
 
-          description: '用于快速理解 GoxEDGE 全球拓展战略模型的简版说明资料，适合首次接触本书方法框架的读者。',
+          description: '用于帮助初次接触 GoxEDGE 的读者快速理解模型结构、六阶段路径和基本使用方式。',
 
           availabilityStatus: 'upcoming',
 
@@ -326,7 +326,7 @@ var OFFERS_CONFIG = {
 
       title: '可购买工具资料',
 
-      description: '需单独购买或随购书读者配套开放的工具类资料。',
+      description: 'Strategy Notebook 等结构化工具材料将根据后续产品化安排逐步开放。',
 
       items: [
 
@@ -338,7 +338,7 @@ var OFFERS_CONFIG = {
 
           category: '工作手册',
 
-          description: '用于记录企业全球拓展中的战略判断、市场假设、路径选择和复盘问题。',
+          description: '用于围绕战略锚点、起点校准、路径设计和阶段复盘开展结构化记录。',
 
           availabilityStatus: 'upcoming',
 
@@ -364,7 +364,7 @@ var OFFERS_CONFIG = {
 
       title: '工作坊配套',
 
-      description: '用于企业读书会、管理层研讨和全球拓展路径共识讨论的材料。',
+      description: '用于企业读书会、管理层研讨和工作坊场景的配套材料。',
 
       items: [
 

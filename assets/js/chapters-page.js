@@ -165,9 +165,11 @@
 
     var pathsContainer = document.querySelector('[data-chapters-paths]');
 
-    if (pathsContainer && config.readingPaths) {
+    var rolePaths = config.rolePaths || config.readingPaths;
 
-      pathsContainer.innerHTML = config.readingPaths.map(renderPath).join('');
+    if (pathsContainer && rolePaths) {
+
+      pathsContainer.innerHTML = rolePaths.map(renderPath).join('');
 
     }
 
