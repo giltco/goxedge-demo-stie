@@ -3498,7 +3498,7 @@
 }
 
 .site-brand.has-logo .site-brand-text {
-  display: none;
+  display: none !important;
 }
 
 .site-brand:not(.has-logo) .site-brand-text {

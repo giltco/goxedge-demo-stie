@@ -272,39 +272,39 @@
 
   function applySiteLogo() {
     var config = book();
-    document.querySelectorAll('[data-book-site-logo]').forEach(function (img) {
-      var brand = img.closest('.site-brand');
-      var logoPath = config.siteLogo;
-      var alt = hasValue(config.siteLogoAlt) ? config.siteLogoAlt : 'GoxEDGE 全球拓展战略模型';
-      var pngFallback = 'assets/img/brand/goxedge-logo.png';
+    var pngFallback = 'assets/img/brand/goxedge-logo.png';
 
-      if (!hasValue(logoPath)) {
-        img.hidden = true;
-        if (brand) brand.classList.remove('has-logo');
+    document.querySelectorAll('.site-brand-logo').forEach(function (img) {
+      var brand = img.closest('.site-brand');
+      if (!brand) return;
+
+      if (hasValue(config.siteLogoAlt)) {
+        img.alt = config.siteLogoAlt;
+      }
+
+      if (!hasValue(config.siteLogo)) {
+        brand.classList.remove('has-logo');
+        img.style.display = 'none';
         return;
       }
 
-      img.alt = alt;
+      function showTextFallback() {
+        brand.classList.remove('has-logo');
+        img.style.display = 'none';
+      }
 
-      img.onload = function () {
-        img.hidden = false;
-        if (brand) brand.classList.add('has-logo');
-      };
-
-      img.onerror = function () {
+      img.addEventListener('error', function () {
         if (img.dataset.fallbackTried === '1') {
-          img.hidden = true;
-          if (brand) brand.classList.remove('has-logo');
+          showTextFallback();
           return;
         }
         img.dataset.fallbackTried = '1';
         img.src = resolveAssetPath(pngFallback);
-      };
+      });
 
-      delete img.dataset.fallbackTried;
-      img.hidden = true;
-      if (brand) brand.classList.remove('has-logo');
-      img.src = resolveAssetPath(logoPath);
+      if (img.complete && img.naturalWidth === 0) {
+        img.dispatchEvent(new Event('error'));
+      }
     });
   }
 
