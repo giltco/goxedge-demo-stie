@@ -96,14 +96,16 @@
     var items = (group.items || []).filter(isEnabled);
     if (!items.length) return '';
 
+    var openAttr = group.id === 'book-purchase' ? ' open' : '';
+
     return (
-      '<section class="v65-offer-group" id="' + escapeHtml(group.id) + '">' +
-        '<header class="v65-offer-group-head">' +
-          '<h2>' + escapeHtml(group.title) + '</h2>' +
-          '<p>' + escapeHtml(group.description) + '</p>' +
-        '</header>' +
+      '<details class="purchase-accordion" id="' + escapeHtml(group.id) + '"' + openAttr + '>' +
+        '<summary>' +
+          '<span>' + escapeHtml(group.title) + '</span>' +
+          '<small>' + escapeHtml(group.description) + '</small>' +
+        '</summary>' +
         '<div class="v65-offer-grid">' + items.map(renderOfferCard).join('') + '</div>' +
-      '</section>'
+      '</details>'
     );
   }
 

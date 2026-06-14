@@ -70,6 +70,10 @@ var BOOK_CONFIG = {
 
   minvistaQRCode: 'assets/img/qrcode/minvista-qrcode.png',
 
+  siteLogo: 'assets/img/brand/goxedge-logo.svg',
+
+  siteLogoAlt: 'GoxEDGE 全球拓展战略模型',
+
   minvistaKeyword: '出海战略',
 
   secondaryKeyword: 'GoxEDGE',

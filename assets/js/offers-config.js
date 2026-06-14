@@ -22,7 +22,7 @@
 
 var OFFERS_CONFIG = {
 
-  pageTitle: '购买渠道与配套资源获取',
+  pageTitle: '购买与获取',
 
   summaryCards: [
 
@@ -36,7 +36,7 @@ var OFFERS_CONFIG = {
 
     {
 
-      title: '读者专享',
+      title: '读者专享资料',
 
       description: '自测表、判断模板、行动计划等资料将面向购书读者逐步开放。'
 
@@ -44,7 +44,7 @@ var OFFERS_CONFIG = {
 
     {
 
-      title: '入门资料',
+      title: '入门资料与更新',
 
       description: 'Starter eBook 等轻量资料将通过 Minvista 获取更新或领取指引。'
 

@@ -11,7 +11,11 @@
 }
 
 .v4-model-toolbar {
-  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
 .v4-model-ctrl {

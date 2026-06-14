@@ -14,7 +14,7 @@
 
 var CHAPTERS_CONFIG = {
 
-  pageTitle: '按章节使用《出海战略》',
+  pageTitle: '《出海战略》阅读指南',
 
   readingPaths: [
 

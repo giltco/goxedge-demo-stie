@@ -19,7 +19,7 @@
       return '图书介绍｜' + displayFullTitle(book);
     },
     chapterGuide: function (book) {
-      return '按章节使用' + bookValue(book, 'bookChineseTitle');
+      return bookValue(book, 'bookChineseTitle') + '阅读指南';
     },
     minvistaPage: function (book) {
       return (book.minvistaName || 'Minvista') + ' 读者更新｜' + bookValue(book, 'bookChineseTitle');
@@ -270,6 +270,44 @@
     });
   }
 
+  function applySiteLogo() {
+    var config = book();
+    document.querySelectorAll('[data-book-site-logo]').forEach(function (img) {
+      var brand = img.closest('.site-brand');
+      var logoPath = config.siteLogo;
+      var alt = hasValue(config.siteLogoAlt) ? config.siteLogoAlt : 'GoxEDGE 全球拓展战略模型';
+      var pngFallback = 'assets/img/brand/goxedge-logo.png';
+
+      if (!hasValue(logoPath)) {
+        img.hidden = true;
+        if (brand) brand.classList.remove('has-logo');
+        return;
+      }
+
+      img.alt = alt;
+
+      img.onload = function () {
+        img.hidden = false;
+        if (brand) brand.classList.add('has-logo');
+      };
+
+      img.onerror = function () {
+        if (img.dataset.fallbackTried === '1') {
+          img.hidden = true;
+          if (brand) brand.classList.remove('has-logo');
+          return;
+        }
+        img.dataset.fallbackTried = '1';
+        img.src = resolveAssetPath(pngFallback);
+      };
+
+      delete img.dataset.fallbackTried;
+      img.hidden = true;
+      if (brand) brand.classList.remove('has-logo');
+      img.src = resolveAssetPath(logoPath);
+    });
+  }
+
   function applyContactEmail() {
     var config = book();
     document.querySelectorAll('[data-book-contact-email]').forEach(function (el) {
@@ -303,6 +341,7 @@
     applyBookCover();
     applyPurchaseLinks();
     applyMinvistaBlocks();
+    applySiteLogo();
     applyContactEmail();
     applyPageTitles();
   }

@@ -247,9 +247,11 @@
 
   function defaultPanelHtml() {
     return (
-      '<p class="v62-detail-type">模型说明</p>' +
-      '<h3 class="v62-detail-title">点击模型元素查看说明</h3>' +
-      '<p class="v62-detail-copy">选择阶段、能力、推进机制或判断项后，这里将显示对应说明。</p>'
+      '<div class="note-panel__default">' +
+        '<p class="note-panel__kicker">模型说明</p>' +
+        '<h3 class="note-panel__title">点击模型元素查看说明</h3>' +
+        '<p class="note-panel__copy">选择阶段、能力、推进机制或判断项后，这里将显示对应说明，帮助你理解该元素在 GoxEDGE 全球拓展战略模型中的位置和作用。</p>' +
+      '</div>'
     );
   }
 
@@ -262,10 +264,12 @@
       if (stage) {
         var chapter = STAGE_CHAPTER[stage.id] || '';
         return (
-          '<p class="v62-detail-type" style="color:' + escapeHtml(stage.color) + '">' + escapeHtml(typeLabel) + '</p>' +
-          '<h3 class="v62-detail-title">' + escapeHtml(stage.title) + ' · ' + escapeHtml(stage.en) + '</h3>' +
-          (chapter ? '<p class="v62-detail-chapter">对应章节：' + escapeHtml(chapter) + '</p>' : '') +
-          '<p class="v62-detail-copy">' + escapeHtml(stage.summary) + '</p>'
+          '<div class="note-panel__selected">' +
+          '<p class="note-panel__badge" style="color:' + escapeHtml(stage.color) + '">' + escapeHtml(typeLabel) + '</p>' +
+          '<h3 class="note-panel__detail-title">' + escapeHtml(stage.title) + ' · ' + escapeHtml(stage.en) + '</h3>' +
+          (chapter ? '<p class="note-panel__chapter">对应章节：' + escapeHtml(chapter) + '</p>' : '') +
+          '<p class="note-panel__detail-copy">' + escapeHtml(stage.summary) + '</p>' +
+          '</div>'
         );
       }
     }
@@ -273,9 +277,11 @@
       var cap = model.capabilities.cells.find(function (c) { return c.id === id; });
       if (cap) {
         return (
-          '<p class="v62-detail-type" style="color:' + escapeHtml(accentColor) + '">' + escapeHtml(typeLabel) + '</p>' +
-          '<h3 class="v62-detail-title">' + escapeHtml(cap.title) + ' · ' + escapeHtml(cap.en) + '</h3>' +
-          '<p class="v62-detail-copy">' + escapeHtml(cap.description) + '</p>'
+          '<div class="note-panel__selected">' +
+          '<p class="note-panel__badge" style="color:' + escapeHtml(accentColor) + '">' + escapeHtml(typeLabel) + '</p>' +
+          '<h3 class="note-panel__detail-title">' + escapeHtml(cap.title) + ' · ' + escapeHtml(cap.en) + '</h3>' +
+          '<p class="note-panel__detail-copy">' + escapeHtml(cap.description) + '</p>' +
+          '</div>'
         );
       }
     }
@@ -283,9 +289,11 @@
       var step = model.mechanism.steps.find(function (s) { return s.id === id; });
       if (step) {
         return (
-          '<p class="v62-detail-type" style="color:' + escapeHtml(accentColor) + '">' + escapeHtml(typeLabel) + '</p>' +
-          '<h3 class="v62-detail-title">' + escapeHtml(step.title) + '</h3>' +
-          '<p class="v62-detail-copy">' + escapeHtml(step.subtitle) + '。' + escapeHtml(step.summary) + '</p>'
+          '<div class="note-panel__selected">' +
+          '<p class="note-panel__badge" style="color:' + escapeHtml(accentColor) + '">' + escapeHtml(typeLabel) + '</p>' +
+          '<h3 class="note-panel__detail-title">' + escapeHtml(step.title) + '</h3>' +
+          '<p class="note-panel__detail-copy">' + escapeHtml(step.subtitle) + '。' + escapeHtml(step.summary) + '</p>' +
+          '</div>'
         );
       }
     }
@@ -293,9 +301,11 @@
       var item = model.judgment.items.find(function (j) { return j.id === id; });
       if (item) {
         return (
-          '<p class="v62-detail-type" style="color:' + escapeHtml(accentColor) + '">' + escapeHtml(typeLabel) + '</p>' +
-          '<h3 class="v62-detail-title">' + escapeHtml(item.title) + '</h3>' +
-          '<p class="v62-detail-copy">' + escapeHtml(item.summary) + '</p>'
+          '<div class="note-panel__selected">' +
+          '<p class="note-panel__badge" style="color:' + escapeHtml(accentColor) + '">' + escapeHtml(typeLabel) + '</p>' +
+          '<h3 class="note-panel__detail-title">' + escapeHtml(item.title) + '</h3>' +
+          '<p class="note-panel__detail-copy">' + escapeHtml(item.summary) + '</p>' +
+          '</div>'
         );
       }
     }
@@ -312,13 +322,15 @@
     clearSelection(root);
     el.classList.add(SELECTED);
     var accent = el.style.getPropertyValue('--stage-color') || TYPE_ACCENTS[type] || '#062f4f';
-    panel.classList.add('v62-detail-panel--active');
+    panel.classList.add('note-panel--selected');
+    panel.classList.remove('note-panel--default');
     panel.style.setProperty('--detail-accent', accent);
     panel.innerHTML = detailFor(window.GOXEDGE_MODEL, type, id, accent);
   }
 
   function resetPanel(panel) {
-    panel.classList.remove('v62-detail-panel--active');
+    panel.classList.remove('note-panel--selected');
+    panel.classList.add('note-panel--default');
     panel.style.removeProperty('--detail-accent');
     panel.innerHTML = defaultPanelHtml();
   }
