@@ -23,21 +23,21 @@
     <button class="v4-menu-toggle mobile-menu-toggle" type="button" aria-label="打开导航">菜单</button>
     <nav class="v4-nav nav-menu" aria-label="主导航">
       <a class="nav-link active" href="index.html">首页</a>
-      <a class="nav-link" data-site-config="showBookDetails" hidden href="book/index.html">图书</a>
-      <a class="nav-link" data-site-config="showFullFramework" hidden href="model/index.html">模型</a>
-      <a class="nav-link" data-site-config="showResourcePreview" hidden href="resources/index.html">资源</a>
-      <a class="nav-link" data-site-config="showChapterGuide" hidden href="chapters/index.html">章节</a>
+      <a class="nav-link" data-site-config="showBookDetails" href="book/index.html">图书</a>
+      <a class="nav-link" data-site-config="showFullFramework" href="model/index.html">模型</a>
+      <a class="nav-link" data-site-config="showChapterGuide" href="chapters/index.html">章节</a>
+      <a class="nav-link" data-site-config="showResourcePreview" href="resources/index.html">资源</a>
       <a class="nav-link" href="updates/index.html">Minvista</a>
       <a class="nav-link" href="contact/index.html">联系</a>
     </nav>
     <div class="v4-header-cta nav-actions">
-      <a class="v4-btn v4-btn-primary" data-site-config="showResourcePreview" hidden href="purchase/index.html">购买与获取</a>
+      <a class="v4-btn v4-btn-primary" data-site-config="showResourcePreview" href="purchase/index.html">购买与获取</a>
     </div>
   </div>
 </header>
 <main>
 
-<section class="v4-hero v4-bg-hero-book" data-site-config="showBookDetails" hidden>
+<section class="v4-hero v4-bg-hero-book" data-site-config="showBookDetails">
   <div class="v4-container">
     <div class="v4-hero-grid">
       <div class="v4-hero-copy">
@@ -53,7 +53,7 @@
         <div class="hero-cta-group">
           <div class="hero-cta-row">
             <a class="site-btn site-btn-primary" href="book/index.html">了解本书</a>
-            <a class="site-btn site-btn-secondary" data-site-config="showResourcePreview" hidden href="resources/index.html">查看配套资源</a>
+            <a class="site-btn site-btn-secondary" href="resources/index.html">查看配套资源</a>
           </div>
           <p class="hero-purchase-note">
             购买渠道将在正式上架后更新 ·
@@ -78,7 +78,38 @@
   </div>
 </section>
 
-<section class="v4-problems" data-site-config="showBookDetails" hidden>
+<section class="home-reader-entry" data-site-config="showBookDetails">
+  <div class="v4-container">
+    <header class="section-heading-center">
+      <h2 class="section-title">从你的当前问题进入</h2>
+      <p class="section-lead">《出海战略》不只适合顺读，也适合根据企业当前阶段和最迫切的问题使用。你可以先从下面的问题进入，再回到对应章节和模型结构中深入阅读。</p>
+    </header>
+    <div class="home-reader-entry__grid">
+      <article class="home-reader-entry__card">
+        <h3>我还在判断是否应该出海</h3>
+        <p>先看全球化环境、出海动因、战略锚点、准备度状态与第一步路径。</p>
+        <a href="chapters/index.html">查看第 1–5 章阅读路径</a>
+      </article>
+      <article class="home-reader-entry__card">
+        <h3>我已经决定进入海外市场</h3>
+        <p>重点关注探索、定位和首轮执行，判断目标市场是否具备进入条件，并跑通第一轮落地链。</p>
+        <a href="chapters/index.html">查看第 6–8 章阅读路径</a>
+      </article>
+      <article class="home-reader-entry__card">
+        <h3>我已有海外样本但难以复制</h3>
+        <p>重点回到组织承接、经验沉淀、跨市场协同和流程复盘，判断局部样本如何转化为可复制能力。</p>
+        <a href="chapters/index.html">查看第 9–10 章阅读路径</a>
+      </article>
+      <article class="home-reader-entry__card">
+        <h3>我已经进入多市场长期经营</h3>
+        <p>重点关注可持续经营结构、本地价值网络、治理闭环、供应链协同与韧性能力。</p>
+        <a href="chapters/index.html">查看第 11 章与结语</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="v4-problems" data-site-config="showBookDetails">
   <div class="v4-container">
     <header class="home-section-header">
       <h2 class="home-section-title">为什么出海不能只看「走出去」？</h2>
@@ -101,7 +132,7 @@
   </div>
 </section>
 
-<section class="v4-home-model" data-site-config="showFullFramework" hidden>
+<section class="v4-home-model" data-site-config="showFullFramework">
   <div class="v4-container">
     <div class="v62-home-model-stack">
       <header class="home-section-header">
@@ -144,7 +175,7 @@
   </div>
 </section>
 
-<section class="v4-resource-preview v4-bg-resource-index" data-site-config="showResourcePreview" hidden>
+<section class="v4-resource-preview v4-bg-resource-index" data-site-config="showResourcePreview">
   <div class="v4-container">
     <header class="home-section-header">
       <h2 class="home-section-title">《出海战略》配套资源</h2>
@@ -157,7 +188,7 @@
   </div>
 </section>
 
-<section class="v4-reading-section" data-site-config="showChapterGuide" hidden>
+<section class="v4-reading-section" data-site-config="showChapterGuide">
   <div class="v4-container">
     <header class="home-section-header">
       <h2 class="home-section-title">按企业阶段阅读</h2>
@@ -185,7 +216,7 @@
   </div>
 </section>
 
-<section class="v4-minvista v4-bg-resource-index" data-site-config="showMinvistaSection" hidden>
+<section class="v4-minvista v4-bg-resource-index" data-site-config="showMinvistaSection">
   <div class="v4-container">
     <div class="minvista-panel-final">
       <div class="minvista-panel-final__content">
@@ -203,11 +234,11 @@
   </div>
 </section>
 
-<section class="v4-final-contact" data-site-config="showEnterpriseInquiry" hidden>
+<section class="v4-final-contact" data-site-config="showEnterpriseInquiry">
   <div class="v4-container">
     <header class="home-section-header">
       <h2 class="home-section-title">需要进一步交流？</h2>
-      <p class="home-section-lead">如需读者交流、媒体沟通、企业内部读书会、管理层工作坊或全球拓展议题讨论，可通过 Minvista 获取后续联系指引。</p>
+      <p class="home-section-lead">如需读者交流、媒体沟通、企业内部读书会、管理层工作坊或全球拓展议题讨论，可通过联系页面查看留言方式。</p>
     </header>
     <div class="home-section-actions">
       <a class="v4-btn v4-btn-secondary home-hero-cta__btn" data-site-cta="showContactCTA" href="contact/index.html">联系作者</a>

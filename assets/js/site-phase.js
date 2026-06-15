@@ -127,6 +127,11 @@
   };
 
   function applyPageGate() {
+    var isObsoletePage = document.body && document.body.dataset.obsoletePage === 'true';
+    if (isObsoletePage) {
+      return;
+    }
+
     var flag = pageGateFlag();
     if (!flag || isEnabled(flag)) return;
 

@@ -1262,7 +1262,8 @@
   background-image: none !important;
 }
 
-/* ── V8.1 LOCKED model design-system consolidation ── */
+/* ── V8.2 GLOBAL model diagram standards ── */
+/* Supersedes V8.1 model consolidation */
 
 /* Mechanism loop artifact removal */
 .v4-model-mechanism-loop,
@@ -1430,4 +1431,43 @@
   .v4-model-scroll {
     overflow-x: visible;
   }
+}
+
+/* Model diagram UX polish */
+.v4-model-scroll {
+  border-color: rgba(23, 32, 42, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(23, 32, 42, 0.05);
+}
+
+.v4-model-stage-card {
+  box-shadow: 0 2px 8px rgba(23, 32, 42, 0.04);
+}
+
+.v4-model-stage-card:hover,
+.v4-model-stage-card:focus-visible {
+  box-shadow: 0 4px 12px rgba(23, 32, 42, 0.06);
+}
+
+.v4-model-mechanism-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.v4-model-mechanism-footnote {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.v4-model-note-bar .v4-model-note-text {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+}
+
+.v4-model-stage-card:focus-visible,
+.v4-model-capability-cell:focus-visible,
+.v4-model-judgment-cell:focus-visible,
+.v4-model-mechanism-node:focus-visible {
+  outline: 2px solid rgba(6, 47, 79, 0.35);
+  outline-offset: 2px;
 }
