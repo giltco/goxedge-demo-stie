@@ -3101,7 +3101,7 @@
 
 .section-title {
   margin: 0;
-  font-family: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  font-family: var(--v4-font-serif);
   font-size: clamp(34px, 4vw, 52px);
   line-height: 1.18;
   letter-spacing: -0.02em;
@@ -3534,15 +3534,8 @@
    V7.1 — Inner page heroes + site logo
    ══════════════════════════════════════ */
 
+.v4-page-hero .inner-page-hero-center,
 .inner-page-hero-center {
-  text-align: center;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* V7.2 — Strong centered page hero override (beats V6.2 left-align rule) */
-.v4-page-hero .inner-page-hero-center {
   width: 100%;
   max-width: 900px;
   margin-left: auto;
@@ -3550,8 +3543,9 @@
   text-align: center;
 }
 
-.v4-page-hero .inner-page-hero-center h1 {
-  font-family: "Noto Serif SC", "Songti SC", "SimSun", serif;
+.v4-page-hero .inner-page-hero-center h1,
+.inner-page-hero-center h1 {
+  font-family: var(--v4-font-serif);
   font-size: clamp(42px, 5vw, 64px);
   line-height: 1.16;
   text-wrap: balance;
@@ -3561,44 +3555,26 @@
 }
 
 .v4-page-hero .inner-page-hero-center p,
-.v4-page-hero .inner-page-hero-center .inner-page-hero-lead {
-  max-width: 780px;
-  margin: 18px auto 0;
-  color: var(--v4-muted, #5f6975);
-  line-height: 1.85;
-  font-size: 1rem;
-  text-align: center;
-}
-
-.inner-page-hero-center h1 {
-  font-family: "Noto Serif SC", "Songti SC", "SimSun", serif;
-  font-size: clamp(42px, 5vw, 64px);
-  line-height: 1.16;
-  text-wrap: balance;
-  margin: 0;
-}
-
+.v4-page-hero .inner-page-hero-center .inner-page-hero-lead,
 .inner-page-hero-center > p,
 .inner-page-hero-center .inner-page-hero-lead {
   max-width: 780px;
   margin: 18px auto 0;
-  color: var(--v4-muted, #5f6975);
+  color: var(--v4-muted);
   line-height: 1.85;
   font-size: 1rem;
-}
-
-.inner-page-hero-center .inner-page-hero-note,
-.inner-page-hero-center .v4-page-note {
-  max-width: 780px;
-  margin: 14px auto 0;
-  font-size: 0.9375rem;
-  color: var(--v4-soft, #7a8490);
-  line-height: 1.75;
   text-align: center;
 }
 
+.inner-page-hero-center .inner-page-hero-note,
+.inner-page-hero-center .v4-page-note,
 .v4-page-hero .inner-page-hero-center .inner-page-hero-note,
 .v4-page-hero .inner-page-hero-center .v4-page-note {
+  max-width: 780px;
+  margin: 14px auto 0;
+  font-size: 0.9375rem;
+  color: var(--v4-soft);
+  line-height: 1.75;
   text-align: center;
 }
 
@@ -3715,90 +3691,6 @@
 
   .purchase-accordion summary small {
     text-align: left;
-  }
-}
-
-/* ── V7.8 homepage hero title/copy regression fix ── */
-body:not(.book-page) .v4-hero h1,
-body:not(.book-page) .home-hero h1,
-body:not(.book-page) .hero h1,
-.v4-hero-title,
-.home-hero-title {
-  max-width: 760px;
-  font-size: clamp(3.2rem, 5.8vw, 6.4rem);
-  line-height: 1.02;
-  letter-spacing: -0.055em;
-  writing-mode: horizontal-tb;
-  text-orientation: mixed;
-  white-space: normal;
-  word-break: normal;
-  overflow-wrap: normal;
-  text-wrap: balance;
-  margin-top: 0;
-  margin-bottom: 22px;
-  overflow: visible;
-  transform: none;
-}
-
-.v4-site[data-book-page="companionHome"] .v4-hero,
-.v4-site[data-book-page="companionHome"] .v4-hero .v4-container,
-.v4-site[data-book-page="companionHome"] .v4-hero-copy {
-  overflow: visible;
-}
-
-@media (min-width: 1024px) {
-  body:not(.book-page) .v4-hero .v4-hero-grid,
-  body:not(.book-page) .home-hero .home-hero-grid,
-  body:not(.book-page) .hero .hero-grid,
-  .v4-site[data-book-page="companionHome"] .v4-hero-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-    align-items: center;
-    gap: clamp(40px, 5vw, 80px);
-  }
-
-  body:not(.book-page) .v4-hero-copy,
-  .v4-site[data-book-page="companionHome"] .v4-hero-copy {
-    max-width: 100%;
-    width: 100%;
-    grid-column: 1;
-  }
-
-  body:not(.book-page) .v4-hero-visual,
-  .v4-site[data-book-page="companionHome"] .v4-hero-visual {
-    max-width: 100%;
-    grid-column: 2;
-  }
-}
-
-@media (max-width: 767px) {
-  body:not(.book-page) .v4-hero h1,
-  body:not(.book-page) .home-hero h1,
-  body:not(.book-page) .hero h1,
-  .v4-hero-title,
-  .home-hero-title,
-  .v4-site[data-book-page="companionHome"] .v4-hero-title {
-    max-width: 100%;
-    font-size: clamp(2.5rem, 12vw, 4rem);
-    line-height: 1.05;
-    letter-spacing: -0.045em;
-    writing-mode: horizontal-tb;
-    word-break: normal;
-    overflow-wrap: normal;
-  }
-
-  body:not(.book-page) .v4-hero-grid,
-  .v4-site[data-book-page="companionHome"] .v4-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  body:not(.book-page) .v4-hero-copy,
-  body:not(.book-page) .v4-hero-visual,
-  .v4-site[data-book-page="companionHome"] .v4-hero-copy,
-  .v4-site[data-book-page="companionHome"] .v4-hero-visual {
-    max-width: 100%;
-    grid-column: 1;
   }
 }
 
@@ -4002,4 +3894,70 @@ body:not(.book-page) .hero h1,
   .v4-site[data-book-page="companionHome"] .v4-hero-thesis {
     padding: 20px 22px;
   }
+}
+
+/* ── V8.1 LOCKED design-system consolidation ── */
+
+/* Homepage book-hero: V8.0 remains final; reinforce serif title */
+.v4-site[data-book-page="companionHome"] .v4-hero-title {
+  font-family: var(--v4-font-serif);
+}
+
+/* Neutralize generic hero title on homepage (superseded by V8.0 scoped rules) */
+.v4-site[data-book-page="companionHome"] .v4-hero-title span {
+  display: inline;
+  white-space: normal;
+}
+
+/* Inner page hero — final standard */
+.v4-page-hero .inner-page-hero-center {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.v4-page-hero .inner-page-hero-center h1 {
+  font-family: var(--v4-font-serif);
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.16;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.v4-page-hero .inner-page-hero-center p {
+  max-width: 780px;
+  margin: 18px auto 0;
+  color: var(--v4-muted);
+  line-height: 1.85;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Section heading — final standard */
+.section-heading-center {
+  text-align: center;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-family: var(--v4-font-serif);
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.section-lead {
+  max-width: 820px;
+  margin: 18px auto 0;
+  color: var(--v4-muted);
+  font-size: 16px;
+  line-height: 1.85;
 }
